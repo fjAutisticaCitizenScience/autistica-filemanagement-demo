@@ -18,7 +18,9 @@ def index(request):
     """
     Starting page for app.
     """
-    auth_url = "https://www.google.com"#OpenHumansMember.get_auth_url().replace("localhost:5000", "autisticaexperiences-prototype.herokuapp.com")
+    login_url = OpenHumansMember.get_auth_url()
+    login_url.replace("localhost:5000", "autisticaexperiences-prototype.herokuapp.com")
+    auth_url = login_url
     context = {'auth_url': auth_url,
                'oh_proj_page': settings.OH_PROJ_PAGE}
     if request.user.is_authenticated:
