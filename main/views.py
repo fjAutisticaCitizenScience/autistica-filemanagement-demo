@@ -19,7 +19,7 @@ def index(request):
     Starting page for app.
     """
     login_url = OpenHumansMember.get_auth_url()
-    login_url.replace("localhost:5000", "autisticaexperiences-prototype.herokuapp.com")
+    login_url.replace("127.0.0.1:5000", "autisticaexperiences-prototype.herokuapp.com")
     auth_url = login_url
     context = {'auth_url': auth_url,
                'oh_proj_page': settings.OH_PROJ_PAGE}
