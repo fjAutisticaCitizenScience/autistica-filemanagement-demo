@@ -18,7 +18,7 @@ def index(request):
     """
     Starting page for app.
     """
-    auth_url = "https://www.openhumans.org/direct-sharing/projects/oauth2/authorize/?client_id=dOjrWikIkoZnh2pOJAiOm0a1XPWHAPIVgRBswH5y&response_type=code" #&redirect_uri=https%3A%2F%2Fautisticaexperiences-prototype.herokuapp.com%2Fopenhumans%2Fcomplete"   OpenHumansMember.get_auth_url()
+    auth_url = "https://www.openhumans.org/direct-sharing/projects/oauth2/authorize/?client_id=dOjrWikIkoZnh2pOJAiOm0a1XPWHAPIVgRBswH5y&response_type=code&redirect_uri=https%3A%2F%2Fautisticaexperiences-prototype.herokuapp.com%2Fopenhumans%2Fcomplete"   #OpenHumansMember.get_auth_url()
     #auth_url.replace('localhost%3A5000', 'autisticaexperiences-prototype.herokuapp.com')
     
     context = {'auth_url': auth_url,
