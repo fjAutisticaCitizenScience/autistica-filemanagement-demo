@@ -30,6 +30,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
             integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
             crossorigin="anonymous"></script>
+<!--    <script src="https://kit.fontawesome.com/e8821c0857.js" crossorigin="anonymous"></script>-->
 
     <link rel="icon" type="image/png"
           href="{% static 'favicon.ico' %}">
@@ -115,8 +116,51 @@
        Defined Profile
        <small class="text-muted">Component Description</small>
    </h3>
-   <!-- Language Selector -->
+   <!-- Define profile -->
    {% include 'main/../components/defineprofile.html' %}
+
+   <br>
+    <h3>
+       User Experience Form
+       <small class="text-muted">Component Description</small>
+   </h3>
+   <!-- User experience form -->
+   {% include 'main/../components/userexperienceform.html' %}
+
+
+   <style>
+    .ma_outerdiv {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .ma_button {
+        background-color: red;
+        color: white;
+        border: none;
+        border-radius: 7px;
+        font-size: 20px;
+        padding: 10px 40px 10px 40px;
+        margin-left: 20px;
+    }
+
+    .ma_text {
+        padding-top: 12px;
+        margin-right: 20px;
+    }
+    </style>
+   <br>
+    <h3>
+       Modular Alert
+       <small class="text-muted">Component Description</small>
+   </h3>
+   <div class="ma_outerdiv">
+        <span class="ma_text">Timeout Save Alert Test</span>
+        <span><button class="ma_button" onclick="showModularAlert('Timeout Save', 'Inactive for 10 minutes, in 2 minutes time your event will be saved as a draft', 1)"><u>Alert</u></button></span>
+    </div>
+   <!-- Modular alerts -->
+   {% include 'main/../components/modularalerts.html' %}
 
    <br>
    <h3>
